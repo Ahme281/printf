@@ -1,6 +1,6 @@
 #include "main.h"
 
-/************************* PRINT CHAR *************************/
+/** PRINT CHAR **/
 
 /**
  * print_char - Prints a char
@@ -48,9 +48,8 @@ int print_string(va_list types, char buffer[],
 			str = "      ";
 	}
 
-		while (str[length] != '\0')
-			length++;
-
+	while (str[length] != '\0')
+		length++;
 
 	if (precision >= 0 && precision < length)
 		length = precision;
@@ -72,6 +71,7 @@ int print_string(va_list types, char buffer[],
 			return (width);
 		}
 	}
+
 	return (write(1, str, length));
 }
 /************************* PRINT PERCENT SIGN *************************/
@@ -96,6 +96,7 @@ int print_percent(va_list types, char buffer[],
 	UNUSED(size);
 	return (write(1, "%%", 1));
 }
+
 /************************* PRINT INT *************************/
 /**
  * print_int - Print int
@@ -185,4 +186,3 @@ int print_binary(va_list types, char buffer[],
 	}
 	return (count);
 }
-
